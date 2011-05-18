@@ -37,7 +37,7 @@ p {color:#888;font-family:sans-serif;font-size:10px;margin-bottom:2px;}
   
   function injectDrama(drama){
     //poor man's 'permalinks'
-    if (location.search) drama = location.search.slice(1,5).toUpperCase();
+    if (location.search) drama = decodeURIComponent(location.search.slice(1,5)).toUpperCase();
     word.textContent = img.alt = drama;
   };
   
